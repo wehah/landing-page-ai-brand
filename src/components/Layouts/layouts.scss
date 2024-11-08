@@ -1,0 +1,121 @@
+@use "../../styles/variables" as v;
+
+.grid-wrapper {
+  text-align: left;
+  display: flex;
+  flex-flow: column wrap;
+  gap: v.$gap-md;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 30rem);
+  width: 100%;
+  gap: v.$gap-md;
+
+  @media screen and (max-width: 767px) {
+    grid-template-rows: repeat(2, 10rem);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 10rem);
+  }
+}
+.grid-item {
+  transition: v.$card-padding-transition;
+  background-color: v.$color-secondary-light;
+  border-radius: v.$corner-md;
+  cursor: pointer;
+
+  &:hover {
+    padding: 0.5rem;
+    transition: v.$card-padding-transition;
+  }
+  &:active {
+    padding: 0;
+    transition: v.$card-padding-transition;
+  }
+}
+
+.grid-item:nth-child(4) {
+  grid-column: span 2;
+
+  @media screen and (max-width: 767px) {
+    grid-column: span 1;
+  }
+}
+.grid-item:nth-child(3){
+
+  @media screen and (max-width: 767px) {
+    grid-row: span 2;
+  }
+}
+.grid-item {
+  .card {
+    height: 100%;
+  }
+}
+
+.card-deck {
+  display: flex;
+  height: 30rem;
+  gap: v.$gap-md;
+
+  @media screen and (max-width: 767px) {
+    height: 90rem;
+    flex-direction: column ;
+  }
+}
+
+       
+.banner-wrapper {
+  overflow: hidden;
+
+  .banner-framer {
+    display: flex;
+    gap:v.$gap-md;
+    padding: v.$m-sm 0;
+    
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      
+    }
+    
+  }
+  
+
+
+  .card {
+    border-radius: v.$corner-md;
+    box-shadow: v.$shadow-paper-large;
+    padding: v.$p-md;
+
+    .card-content {
+      align-items: flex-start;
+      gap:0;
+
+      .variant-body1 {
+        margin-bottom: 3rem !important;
+      }
+    }
+
+    .card-button {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-thumbnail {
+      background-color: v.$color-primary-pale;
+      padding: v.$p-md;
+      border-radius: v.$corners-rounded;
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    }
+  }
+}
+

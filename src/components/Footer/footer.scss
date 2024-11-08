@@ -1,0 +1,58 @@
+@use "../../styles/variables" as v;
+
+   
+.footer {
+background-color: v.$color-primary-pale;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 1.5rem 1rem;
+margin-top: 1.5rem;
+gap:10rem;
+
+@media screen and (max-width: 767px) {
+    padding: 0.85rem 0.5rem;
+    margin-top: 0.85rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+
+    .footer-list-items {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+
+        .footer-list-items{
+            flex-direction: column;
+        }
+        
+    }
+
+    .footer-socials {
+        display: flex;
+        justify-content: flex-end;
+        gap: 01rem;
+
+        img {
+            padding: v.$p-md;
+        }
+        
+
+        >*{
+            cursor: pointer;
+        }
+    }
+}
+.footer-text {
+    border-top: 0.15rem solid v.$color-primary-dim;
+    border-bottom: 0.15rem solid v.$color-primary-dim;
+    padding: v.$p-lg 0;
+}
+}

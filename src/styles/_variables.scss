@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+$background-white: #FAFAFA;
+$background-dark: #212121;
+$background-pale: #bdbdbd;
+
+//colors-primary
+$color-primary-main: #212121;
+$color-primary-dim: #616161;
+$color-primary-pale: #BDBDBD;
+$color-primary-light: #FAFAFA;
+
+//color-secondary
+$color-secondary-main: #9c27b0;
+$color-secondary-dim: #ba68c8;
+$color-secondary-pale: #e1bee7;
+$color-secondary-light: #f3e5f5;
+
+$link-color: #9c27b0;
+$error-color: #f64a00;
+
+$font: "Plus Jakarta Sans", sans-serif;
+$font-icon:"Material Icons";
+
+//corners
+$corners-rounded:6.25rem;
+$corner-xl: 2.5rem;
+$corner-lg: 1.0rem;
+$corner-md: 0.45rem;
+$corner-sm: 1rem;
+$corner-xs: 0.3rem;
+
+$shadow-paper: (
+  0px 0.5px 0.5px 0px rgba(33, 33, 33, 0.3),
+  0px 0px 1px 0.5px rgba(33, 33, 33, 0.3)
+);
+
+$shadow-paper-large: (
+  0px 2.5px 2.0px 0px rgba(33, 33, 33, 0.3),
+  0px 0px 1px 1.5px rgba(33, 33, 33, 0.3)
+);
+
+$shadow-button-primary:rgba(33, 33, 33, 0.3) 0px 3.5px 3px 0px;
+$shadow-text:rgba(33, 33, 33, 0.8) 2px  2px 4px;
+
+$gap-xlg:2rem;
+$gap-lg:1rem;
+$gap-md:0.5rem;
+$gap-sm:0.25rem;
+
+$p-xlg:2rem;
+$p-lg:1rem;
+$p-md:0.5rem;
+$p-sm:0.25rem;
+
+$m-xlg:2rem;
+$m-lg:1rem;
+$m-md:0.5rem;
+$m-sm:0.25rem;
+
+$card-padding-transition: padding 0.3s ease-in-out;
+
+
+

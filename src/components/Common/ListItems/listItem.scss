@@ -1,0 +1,25 @@
+
+@use "../../../styles/variables" as v;
+
+
+
+.list-item{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+    padding: 0 0.5rem !important;
+    border-radius: v.$corner-xs;
+
+    &:hover{
+        background-color: v.$color-secondary-light;
+    }
+    &:active{
+        background-color: v.$color-primary-light;
+    }
+}
+
+.list-item-width-full {
+    width: 100%;
+    justify-content: space-between;
+}

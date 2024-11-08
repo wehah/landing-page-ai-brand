@@ -1,0 +1,26 @@
+
+
+#root {
+  text-align: center;
+  text-wrap:pretty;
+  
+  *{
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  > *:not(.navbar, .footer) {
+    padding: 0rem 1rem;
+    margin: 1.5rem  0;
+
+
+    @media screen and (max-width: 767px) {
+      padding: 0rem 0.5rem;
+      margin: 0.85rem 0 ;
+}
+}
+}
+
+
+
+

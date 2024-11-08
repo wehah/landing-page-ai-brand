@@ -1,0 +1,45 @@
+@use "../../styles/variables" as v;
+
+.slider-wrapper {
+    overflow: hidden;
+
+    .slider {
+        overflow: hidden;
+
+        .slick-track {
+            display: flex;
+            height: 100%;
+            gap: 0.2rem;
+
+        }
+
+
+        .slider-dots {
+            display: flex !important;
+            gap:1rem;
+            padding: 0.5rem 0;
+          
+        
+            justify-content: center;
+            
+            .slick-active button {
+                background-color: v.$color-secondary-main ;
+                transition: 1s ease-in-out;
+            }
+        }
+        
+        .slider-dots li {
+            transition: 1s ease-in-out;
+            list-style-type: none;
+            display: inline-flex;
+        
+            span {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+        }
+
+     
+    }
+}
+

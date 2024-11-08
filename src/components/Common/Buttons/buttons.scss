@@ -1,0 +1,75 @@
+
+@use "../../../styles/variables" as v;
+
+button {
+    border: none;
+    cursor: pointer;
+    scale: 1;
+    transition: 0.2s ease-in;
+}
+
+button:not(.btn-rounded, .btn-dot){
+    padding: 0.8rem 1rem !important;
+    border-radius: v.$corner-xl;
+}
+
+.btn-rounded {
+    border-radius: v.$corners-rounded;
+    width: 3.4rem;
+    height: 3.4rem;
+    text-align: center
+    }
+
+
+.btn-dot {
+border-radius: v.$corners-rounded;
+   width: 1.0rem;
+   height: 1.0rem;
+   padding: 0 0 !important;
+}
+
+.btn-hover {
+    box-shadow: v.$shadow-button-primary;
+    transition: 0.2s ease-in;
+}
+
+
+
+
+
+.variant-btn-primary {
+    background-color: v.$color-secondary-main;
+    color: v.$color-primary-light;
+}
+
+.variant-btn-secondary {
+    background-color: v.$color-secondary-light;
+    color: v.$color-secondary-main;
+
+     &:active{
+        color: v.$color-secondary-light;
+    }
+}
+
+.variant-btn-text-link {
+    background-color: transparent;
+    color: v.$color-secondary-main;
+}
+
+.btn-disabled {
+    color: v.$color-secondary-dim;
+    cursor:auto;
+    background-color: v.$color-secondary-light;
+    border: 0.1rem solid v.$color-secondary-dim;
+}
+
+.text-link-hover {
+    background-color: v.$color-secondary-light;
+    transition: 0.2s ease-in;
+}
+
+.btn-pressed {
+    background-color: v.$color-secondary-dim;
+    }
+
+

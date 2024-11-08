@@ -1,0 +1,81 @@
+@use "../../styles/variables.scss" as v;
+
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: v.$shadow-paper;
+  padding: v.$p-md v.$p-lg;
+
+  @media screen and (max-width: 767px) {
+    padding: v.$p-md;
+  }
+  .overlay {
+    height: 100dvh;
+    width: 100dvw;
+    background-color: rgba(33, 33, 33, 0.4);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    // transition: opacity 0.4s ease;
+
+  }
+
+  .closed-overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s 0.4s, opacity 0.4s linear;
+  }
+
+  .open-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .drawer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    background-color: v.$color-primary-light;
+    display: flex;
+    flex-direction: column;
+    padding: v.$p-md;
+    gap: 2rem;
+    transition: transform 0.3s ease-in-out;
+
+    .drawer-header {
+      text-align: right;
+    }
+  }
+
+  .closed-drawer {
+    transform: translateX(100%);
+  }
+
+  .open-drawer {
+    transform: translateX(0);
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.drawer-user-action {
+  text-align: left;
+  >* {
+    padding: 0 v.$p-md;
+  }
+
+  span {
+    margin-top: v.$m-md !important;
+    display: flex;
+    gap:v.$gap-md;
+  }
+}

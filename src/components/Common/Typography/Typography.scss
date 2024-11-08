@@ -1,0 +1,80 @@
+@use "../../../styles/variables" as v;
+
+.variant-h1 {
+  font-family: v.$font;
+  font-size: 3.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.variant-h2 {
+  font-family: v.$font;
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.variant-h3 {
+  font-family: v.$font;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.05rem;
+}
+
+
+.variant-body1 {
+  font-family: v.$font;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+  text-wrap: balance;
+}
+
+.variant-body2 {
+  font-family: v.$font;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.05rem;
+}
+
+.variant-icon, .variant-dot {
+  font-family: v.$font-icon;
+  font-size: 2.4rem;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 3.4rem;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+
+.color-primary {
+  color: v.$color-primary-main;
+}
+
+.color-primary-dim {
+  color: v.$color-primary-dim;
+}
+
+.color-primary-light {
+    color: v.$color-primary-light;
+  }
+
+.color-secondary {
+  color: v.$color-secondary-main;
+}
+
+.color-secondary-dim {
+  color: v.$color-secondary-dim
+}
+
+.color-secondary-light {
+    color: v.$color-secondary-light;
+  }
