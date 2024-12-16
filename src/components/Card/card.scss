@@ -3,7 +3,7 @@
 .card {
   width: 100%;
   position: relative;
-
+  border-radius: v.$corner-md v.$corner-md;
 }
 
 .card-long {
@@ -19,10 +19,9 @@
 }
 
 .card-content {
-    display: flex;
+  display: flex;
   flex-flow: column wrap;
-  gap:v.$gap-md;
- 
+  gap: v.$gap-sm;
 }
 
 .content-overlay {
@@ -32,9 +31,7 @@
   transform: translate(-50%, -50%);
   text-shadow: v.$shadow-text;
 
-  
-
-  >* :not(:first-child) {
+  > * :not(:first-child) {
     margin-top: 0.5rem !important;
   }
 
@@ -42,19 +39,16 @@
     width: 100%;
     padding: 0.3rem;
   }
-
-  
 }
 
 .card-info {
   padding: 0 2rem;
- 
+
   @media screen and (max-width: 767px) {
     padding: 0rem !important;
     .card-content {
-      align-items:flex-start;
+      align-items: flex-start;
       text-align: left;
-
     }
   }
 }
@@ -64,15 +58,13 @@
   display: flex;
   flex-direction: column;
   background-color: v.$color-secondary-light;
-  box-shadow: v.$shadow-paper-large;
+  box-shadow: v.$shadow-paper-medium;
   border-radius: v.$corner-md v.$corner-md;
   overflow: hidden;
   cursor: pointer;
 
- 
-
   img {
-      border-radius: v.$corner-md v.$corner-md 0 0;
+    border-radius: v.$corner-md v.$corner-md 0 0;
   }
 
   .card-content {
@@ -82,5 +74,14 @@
     span {
       text-align: right;
     }
+  }
+}
+
+.paper {
+  .card-info {
+    background-color: transparent;
+  }
+  .card-content {
+    background-color: transparent !important;
   }
 }

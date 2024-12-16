@@ -4,6 +4,8 @@ import Video from "../Common/image/Video";
 import classNames from "classnames";
 import Typography from "../Common/Typography/Typography";
 import Button from "../Common/Buttons/Buttons";
+import { useState } from "react";
+import {AnimatePresence, motion} from "framer-motion"
 
 export default function Card({
   cardLabel,
@@ -11,13 +13,17 @@ export default function Card({
   item,
   content,
   thumbnail,
+  motionContent
 }) {
+  const [showContent, setShowContent] = useState(false)
   return (
     <div
       className={classNames({
         ["card"]: true,
         [`card-${cardLabel}`]: cardLabel,
       })}
+      onMouseEnter={() => setShowContent(true)}
+      onMouseLeave={() => setShowContent(false)}
     >
       {item && item.image && (
         <div className="card-image">
@@ -55,6 +61,26 @@ export default function Card({
           </span>
         </div>
       )}
+      <AnimatePresence>
+       {motionContent && showContent && (
+                <motion.div
+                 className="item-content"
+                 initial={{opacity:0}}
+                 animate={{opacity:1}}
+                 exit = {{opacity:0}}
+                 >
+                  <div className="overley" />
+                  <motion.div 
+                  className="content-body"
+                  initial = {{y:15}}
+                  animate = {{y:0}}
+                  exit={{y:15}}
+                  >
+                    <Button label={motionContent} variant={"secondary"} />
+                  </motion.div>
+                </motion.div>
+              )} 
+              </AnimatePresence>
     </div>
   );
 }

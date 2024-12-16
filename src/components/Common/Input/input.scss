@@ -1,0 +1,35 @@
+@use "../../../styles/variables" as v;
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 10;
+
+  input {
+    width: 100%;
+    height: 100%;
+    border-radius: v.$corner-sm;
+    border: 0.1rem solid v.$color-secondary-pale;
+    font-family: v.$font;
+    font-size: 1.0625rem;
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+    padding: v.$p-md;
+
+    &::placeholder {
+      color: v.$color-secondary-dim;
+      //refrence: https://www.w3schools.com/cssref/sel_placeholder.php
+    }
+
+    &:focus {
+      outline: none;
+      border: 0.1rem solid v.$color-secondary-main;
+
+      &::placeholder {
+        color: v.$color-secondary-pale;
+      }
+    }
+  }
+}

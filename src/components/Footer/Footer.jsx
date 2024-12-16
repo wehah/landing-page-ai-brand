@@ -32,7 +32,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="footer-text">
-                <Typography variant={"body2"}>© 2024 by wehah.ai. All rights reserved.</Typography>
+                <Typography variant={"body2"} color={"primary-dim"}>© Design and code by Mohamed Ali.</Typography>
             </div>
         </div>
     );

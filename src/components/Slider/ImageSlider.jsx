@@ -12,7 +12,7 @@ export default function ImageSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 15000,
+    autoplaySpeed: 1500000,
     arrows: false,
     cssEase: "cubic-bezier(0.12, 0.57, 0.63, 0.21)",
     dotsClass: "slider-dots",
@@ -38,7 +38,7 @@ export default function ImageSlider() {
     },
   ];
 
-  const buttonContent = { variant: "secondary", label: "learn more" };
+  const buttonContent = { variant: "secondary", label: "Learn More" };
   const heading = { color: "primary-light", variant: "h3" };
 
   return (

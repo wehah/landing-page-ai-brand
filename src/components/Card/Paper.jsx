@@ -18,7 +18,7 @@ export default function Paper() {
 
 
     return (
-        <div>
+        <div className="paper">
         {items.map((item, index) => (
           <Card
           key={index}

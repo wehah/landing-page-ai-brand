@@ -2,25 +2,40 @@ import Typography from "../Typography/Typography";
 import classNames from "classnames";
 import "./buttons.scss";
 import { useState } from "react";
+import {useAnimate } from "motion/react"
+import {animateClicks, animateMouseEnter, animateMouseLeave} from "./animateBtn";
+
 
 const variantMapping = {
   primary: "btn-primary",
   secondary: "btn-secondary",
   textLink: "btn-text-link",
   rounded: "btn-rounded",
-  dotButton: "btn-dot"
+  dotButton: "btn-dot",
 };
 
-export default function Button({
-  onClick,
-  variant,
-  shape,
-  label,
-  isDisabled = false,
-}) {
+export default function Button({ onClick, variant, shape, label, isDisabled }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
-  const [disabled] = useState(isDisabled);
+  const [scope, animate] = useAnimate();
+  const roundBtn = shape === "rounded" || shape === "dot" || variant === "text-link";
+  
+
+  const handleClicks = (event) => {
+    onClick && onClick(event);
+    animateClicks(animate, roundBtn)
+  }
+
+  const handleMouseEnter = () => {
+    animateMouseEnter(animate, roundBtn);
+    setIsHovered(true);
+  }
+
+  const handleMouseLeave = () => {
+ animateMouseLeave(animate, roundBtn);
+    setIsHovered(false);
+  }
+
 
   const btnPrimaryClass = {
     [`variant-${variantMapping[variant]}`]: variant,
@@ -35,21 +50,46 @@ export default function Button({
   };
 
   return (
-    <button
-      className={classNames(btnPrimaryClass)}
-      onClick={onClick}
-      onMouseDown={() => setIsPressed(true)}
-      onMouseUp={() => setIsPressed(false)}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <Typography
-        variant={
-          shape === "rounded" || shape === "dot" ? "icon" : "body2"
-        }
+    <div ref={scope} className="button-wrapper">
+      <button
+        className={classNames(btnPrimaryClass)}
+        onClick={handleClicks}
+        onMouseDown={() => setIsPressed(true)}
+        onMouseUp={() => setIsPressed(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        {label}
-      </Typography>
-    </button>
+        {roundBtn && (
+          <Typography
+            variant={shape === "rounded" || shape === "dot" ? "icon" : "body2"}
+          >
+            {label}
+          </Typography>
+        )}
+        {!roundBtn && (
+          <>
+            <Typography
+              variant={
+                shape === "rounded" || shape === "dot" ? "icon" : "body2"
+              }
+            >
+              {label.split("").map((char, index) => (
+                <span
+                  data-char={char}
+                  className="char"
+                  key={`${char}-${index}`}
+                >
+                  {char === " " ? "\u00A0" : char}
+                </span>
+              ))}
+            </Typography>
+
+          </>
+        )}
+                    <div className="filler-container">
+              <div className="filler"></div>
+            </div>
+      </button>
+    </div>
   );
 }

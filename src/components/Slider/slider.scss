@@ -1,25 +1,19 @@
 @use "../../styles/variables" as v;
 
 .slider-wrapper {
-    overflow: hidden;
-
+  
     .slider {
         overflow: hidden;
-
         .slick-track {
             display: flex;
             height: 100%;
-            gap: 0.2rem;
-
+            gap: 0.2rem;  
         }
-
 
         .slider-dots {
             display: flex !important;
             gap:1rem;
             padding: 0.5rem 0;
-          
-        
             justify-content: center;
             
             .slick-active button {

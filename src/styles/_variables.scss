@@ -8,7 +8,9 @@ $background-pale: #bdbdbd;
 //colors-primary
 $color-primary-main: #212121;
 $color-primary-dim: #616161;
-$color-primary-pale: #BDBDBD;
+$color-primary-dimmer: #757575;
+$color-primary-pale: #E0E0E0;
+$color-primary-pale2: #EEEEEE;
 $color-primary-light: #FAFAFA;
 
 //color-secondary
@@ -28,12 +30,17 @@ $corners-rounded:6.25rem;
 $corner-xl: 2.5rem;
 $corner-lg: 1.0rem;
 $corner-md: 0.45rem;
-$corner-sm: 1rem;
-$corner-xs: 0.3rem;
+$corner-sm: 0.3rem;
+$corner-xs: 0.15rem;
 
+//shadows
 $shadow-paper: (
   0px 0.5px 0.5px 0px rgba(33, 33, 33, 0.3),
   0px 0px 1px 0.5px rgba(33, 33, 33, 0.3)
+);
+
+$shadow-paper-medium: (
+  0px 0px 1px 2.4px rgba(33, 33, 33, 0.3)
 );
 
 $shadow-paper-large: (
@@ -44,22 +51,37 @@ $shadow-paper-large: (
 $shadow-button-primary:rgba(33, 33, 33, 0.3) 0px 3.5px 3px 0px;
 $shadow-text:rgba(33, 33, 33, 0.8) 2px  2px 4px;
 
-$gap-xlg:2rem;
+//gaps
+$gap-xxlg:2.5rem;
+$gap-xlg:1.5rem;
 $gap-lg:1rem;
-$gap-md:0.5rem;
+$gap-md:0.65rem;
 $gap-sm:0.25rem;
 
-$p-xlg:2rem;
+//paddings
+$p-xlg:1.5rem;
 $p-lg:1rem;
 $p-md:0.5rem;
 $p-sm:0.25rem;
 
-$m-xlg:2rem;
+//margins
+$m-xlg:1.5rem;
 $m-lg:1rem;
 $m-md:0.5rem;
 $m-sm:0.25rem;
 
-$card-padding-transition: padding 0.3s ease-in-out;
+//borders
+$border-sm:0.10rem solid $color-primary-dim;
+$border-md:0.15rem solid $color-primary-dim;
+$border-lg:0.20rem solid $color-primary-dim;
+
+//borders dark-theme
+$border-sm-dark:0.10rem solid $color-primary-pale;
+$border-md-dark:0.15rem solid $color-primary-pale;
+$border-lg-dark:0.20rem solid $color-primary-pale;
+
+//transitions
+$card-padding-transition: padding 0.2s ease-in-out;
 
 
 

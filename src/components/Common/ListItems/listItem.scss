@@ -1,25 +1,99 @@
-
 @use "../../../styles/variables" as v;
 
+.list-item {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  flex-direction: column;
+  padding: 0 !important;
+  border-radius: v.$corner-xs;
 
-
-.list-item{
+  .list-item-title {
     display: flex;
     align-items: center;
     width: fit-content;
-    cursor: pointer;
     padding: 0 0.5rem !important;
-    border-radius: v.$corner-xs;
+    cursor: pointer;
+    transition: 0.35s ease-in-out;
 
-    &:hover{
-        background-color: v.$color-secondary-light;
+    &:hover {
+      background-color: v.$color-secondary-light;
+      transition: 0.35s ease-in-out;
     }
-    &:active{
-        background-color: v.$color-primary-light;
+    &:active {
+      background-color: v.$color-primary-light;
     }
+  }
+}
+
+.desktop-item-container {
+  width: 100%;
+  padding: v.$m-lg;
 }
 
 .list-item-width-full {
+  width: 100%;
+
+  .list-item-title {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .list-item-children {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: v.$p-sm v.$p-lg;
+    color: v.$color-primary-dim;
+
+    > * {
+      cursor: pointer;
+      padding: v.$p-md;
+    }
+  }
+}
+
+.list-item-children-desktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  > * {
+    cursor: pointer;
+    text-align: left;
+
+    > *:not(.inner-children) {
+      padding: v.$p-md 0;
+    }
+
+    .inner-children > * {
+      padding: v.$p-sm v.$p-md;
+
+      &:hover {
+        background-color: v.$color-secondary-light;
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .list-item {
+    .list-item-title {
+      > * {
+        color: v.$color-primary-light;
+      }
+
+      &:hover > * {
+        color: v.$color-primary-main;
+      }
+    }
+  }
+
+  .text-decoration {
+    > * {
+      color: v.$color-primary-pale;
+    }
+  }
 }
