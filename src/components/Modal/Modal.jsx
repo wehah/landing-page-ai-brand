@@ -20,11 +20,17 @@ const Modal = () => {
   };
 
   useEffect(() => {
-    if (localStorage.getItem("modal") === "closed") {
-      closeModal();
-    } else {
-      openModal();
-    }
+    const modalTimer = setTimeout(() => {
+      if (localStorage.getItem("modal") === "closed") {
+        closeModal();
+      } else {  
+        openModal(); 
+      }
+    }, 10000)
+
+    return () => {
+      clearTimeout(modalTimer);
+    };
   }, [closeModal]);
 
   return (
