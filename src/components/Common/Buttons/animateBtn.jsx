@@ -29,12 +29,12 @@ export const animateMouseEnter = (animate, roundBtn) => {
     animate([
       [
         ".filler-container",
-        { width: "100%", height: "100%", opacity: 1 },
+        { width: "100%", height: "100%", opacity: 1, x:"-50%", y:"-50%" },
         { duration: 0.3, ease: "linear" },
       ],
       [
         ".filler",
-        { scale: 45, opacity: 1 },
+        { scale: 45, opacity: 1, x:"-50%", y:"-50%" },
         { duration: 0.3, ease: "easeInOut", at: 0.15 },
       ],
     ]);
@@ -52,7 +52,7 @@ export const animateMouseLeave = (animate, roundBtn) => {
     animate([
       [
         ".filler",
-        { scale: 1, opacity: 0 },
+        { scale: 1, opacity: 0, x:"-50%", y:"-50%" },
         { duration: 0.3, ease: "easeInOut", opacity: { delay: 0.2 } },
       ],
       [
