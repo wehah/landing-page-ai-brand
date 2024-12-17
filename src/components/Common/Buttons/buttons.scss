@@ -75,8 +75,7 @@ button:not(.btn-rounded, .btn-dot) {
     background-color: v.$color-secondary-light;
     overflow: visible;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    inset: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
     width: 1px;
@@ -91,12 +90,9 @@ button:not(.btn-rounded, .btn-dot) {
       height: 1px;
       background-color: v.$color-secondary-dim;
       border-radius: v.$corners-rounded;
-      top: 50%;
-      left: 50%;
+      inset: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
-
-
     }
   }
 }

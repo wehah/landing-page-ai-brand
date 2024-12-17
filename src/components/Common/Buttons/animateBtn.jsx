@@ -23,19 +23,19 @@ export const animateMouseEnter = (animate, roundBtn) => {
   if (!roundBtn) {
     animate([
       ["button", { scale: 1.01 }, { duration: 0.1 }],
-      [".filler", { scale: 200, x: 70 }, { duration: 0.25, ease: "linear" }],
+      [".filler", { scale: 210, x: 70 }, { duration: 0.25, ease: "linear" }],
     ]);
   } else if (roundBtn) {
     animate([
       [
         ".filler-container",
-        { width: "100%", height: "100%", opacity: 1, x:"-50%", y:"-50%" },
+        { width: "100%", height: "100%", opacity: 1, x:"-50%", y:"-50%"   },
         { duration: 0.3, ease: "linear" },
       ],
       [
         ".filler",
-        { scale: 45, opacity: 1, x:"-50%", y:"-50%" },
-        { duration: 0.3, ease: "easeInOut", at: 0.15 },
+        { scale: 45, opacity: 1, x:"-50%", y:"-50%"},
+        { duration: 0.3, ease: "easeInOut", at: 0.15,  },
       ],
     ]);
   }
@@ -57,7 +57,7 @@ export const animateMouseLeave = (animate, roundBtn) => {
       ],
       [
         ".filler-container",
-        { width: "1%", height: "1%", opacity: 0 },
+        { width: "1%", height: "1%", opacity: 0, x:"-50%", y:"-50%"  },
         { duration: 0.3, at: 0.2, ease: "linear" },
       ],
     ]);
