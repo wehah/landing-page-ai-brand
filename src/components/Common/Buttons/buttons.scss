@@ -67,7 +67,6 @@ button:not(.btn-rounded, .btn-dot) {
   .filler-container {
     border-radius: v.$corners-rounded;
     background-color: v.$color-secondary-light;
-    overflow: visible;
     position: absolute;
     top: 50%;
     left: 50%;

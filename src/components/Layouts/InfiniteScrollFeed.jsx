@@ -29,7 +29,7 @@ export default function InfiniteScrollFeed() {
 
   useEffect(() => {
     let controls;
-    let finalPosition = -width / 2;
+    let finalPosition = -width / 2 - 5.2;
 
     if (mustFinish) {
       controls = animate(xTranslation, [xTranslation.get(), finalPosition], {

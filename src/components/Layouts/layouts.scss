@@ -154,23 +154,24 @@
   }
 
   .scroll-track {
-    position: absolute;
-    max-width: fit-content;
-    width: fit-content;
+    height: 100%;
+    width: max-content;
     inset: 0;
     display: flex;
+    align-items: center;
     gap: v.$gap-md;
 
     .scroll-item {
-      width: 20rem !important;
+      height: 100%;
+      width: 20rem;
       position: relative;
       overflow: hidden;
 
       .card {
-        width: 20rem !important;
         height: 100%;
 
         .card-image {
+          height: 100%;
           width: 100%;
         }
       }
@@ -205,3 +206,4 @@
     }
   }
 }
+

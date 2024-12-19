@@ -2,7 +2,7 @@ import Typography from "../Typography/Typography";
 import classNames from "classnames";
 import "./buttons.scss";
 import { useState } from "react";
-import {useAnimate } from "motion/react"
+import {useAnimate } from "framer-motion";
 import {animateClicks, animateMouseEnter, animateMouseLeave} from "./animateBtn";
 
 
