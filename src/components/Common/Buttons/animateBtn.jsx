@@ -14,8 +14,8 @@ export const animateClicks = (animate, roundBtn) => {
     ]);
   } else if (roundBtn) {
     animate([
-      [".filler", { scale: 40 }, { duration: 0.1, ease: "linear" }],
-      [".filler", { scale: 45 }, { duration: 0.1, ease: "linear" }],
+      [".filler-container", { width: "90%" }, { duration: 0.15, ease: "linear" }],
+      [".filler-container", { width: "100%"}, { duration: 0.15, ease: "linear" }],
     ]);
   }
 };
@@ -42,24 +42,15 @@ export const animateMouseEnter = (animate, roundBtn) => {
         ".filler-container",
         {
           width: "100%",
-          height: "100%",
           opacity: 1,
-          x: "0%",
-          y: "0%",
-          translateX: "-50%",
-          translateY: "-50%",
         },
         { duration: 0.3, ease: "linear" },
       ],
       [
         ".filler",
         {
-          scale: 45,
+          width: "80%",
           opacity: 1,
-          x: "50%",
-          y: "50%",
-          translateX: "-50%",
-          translateY: "-50%",
         },
         { duration: 0.3, ease: "easeInOut", at: 0.15 },
       ],
@@ -87,12 +78,8 @@ export const animateMouseLeave = (animate, roundBtn) => {
       [
         ".filler",
         {
-          scale: 1,
+          width: "1%",
           opacity: 0,
-          x: "0%",
-          y: "0%",
-          translateX: "-50%",
-          translateY: "-50%",
         },
         { duration: 0.3, ease: "easeInOut", opacity: { delay: 0.2 } },
       ],
@@ -100,12 +87,7 @@ export const animateMouseLeave = (animate, roundBtn) => {
         ".filler-container",
         {
           width: "1%",
-          height: "1%",
           opacity: 0,
-          x: "0%",
-          y: "0%",
-          translateX: "-50%",
-          translateY: "-50%",
         },
         { duration: 0.3, at: 0.2, ease: "linear" },
       ],

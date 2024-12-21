@@ -27,13 +27,12 @@ button {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    opacity: 0;
 
     .filler {
       background-color: v.$color-secondary-dim;
-      width: 1px;
-      height: 1px;
       border-radius: v.$corners-rounded;
-      opacity: 1;
+      
     }
   }
 }
@@ -86,12 +85,14 @@ button:not(.btn-rounded, .btn-dot) {
     top: 50%;
     left: 50%;
     z-index: -1;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+
   }
   .filler {
     position: absolute;
+    width: 1%;
+    aspect-ratio: 1/1;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -136,6 +137,12 @@ button:not(.btn-rounded, .btn-dot) {
   background-color: transparent;
   color: v.$color-secondary-main;
   transition: color 0.25s linear;
+
+  &:active,
+  &:hover {
+    color: v.$color-secondary-light;
+    transition: color 0.25s linear;
+  }
 }
 
 .text-link-hover {
