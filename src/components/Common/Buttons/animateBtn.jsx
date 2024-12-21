@@ -14,8 +14,16 @@ export const animateClicks = (animate, roundBtn) => {
     ]);
   } else if (roundBtn) {
     animate([
-      [".filler-container", { width: "90%" }, { duration: 0.15, ease: "linear" }],
-      [".filler-container", { width: "100%"}, { duration: 0.15, ease: "linear" }],
+      [
+        ".filler-container",
+        { width: "90%" },
+        { duration: 0.15, ease: "linear" },
+      ],
+      [
+        ".filler-container",
+        { width: "100%" },
+        { duration: 0.15, ease: "linear" },
+      ],
     ]);
   }
 };
