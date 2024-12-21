@@ -2,9 +2,12 @@ import Typography from "../Typography/Typography";
 import classNames from "classnames";
 import "./buttons.scss";
 import { useState } from "react";
-import {useAnimate } from "framer-motion";
-import {animateClicks, animateMouseEnter, animateMouseLeave} from "./animateBtn";
-
+import { useAnimate } from "framer-motion";
+import {
+  animateClicks,
+  animateMouseEnter,
+  animateMouseLeave,
+} from "./animateBtn";
 
 const variantMapping = {
   primary: "btn-primary",
@@ -18,24 +21,23 @@ export default function Button({ onClick, variant, shape, label, isDisabled }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
   const [scope, animate] = useAnimate();
-  const roundBtn = shape === "rounded" || shape === "dot" || variant === "text-link";
-  
+  const roundBtn =
+    shape === "rounded" || shape === "dot" || variant === "text-link";
 
   const handleClicks = (event) => {
     onClick && onClick(event);
-    animateClicks(animate, roundBtn)
-  }
+    animateClicks(animate, roundBtn);
+  };
 
   const handleMouseEnter = () => {
     animateMouseEnter(animate, roundBtn);
     setIsHovered(true);
-  }
+  };
 
   const handleMouseLeave = () => {
- animateMouseLeave(animate, roundBtn);
+    animateMouseLeave(animate, roundBtn);
     setIsHovered(false);
-  }
-
+  };
 
   const btnPrimaryClass = {
     [`variant-${variantMapping[variant]}`]: variant,
@@ -83,12 +85,11 @@ export default function Button({ onClick, variant, shape, label, isDisabled }) {
                 </span>
               ))}
             </Typography>
-
           </>
         )}
-                    <div className="filler-container">
-              <div className="filler"></div>
-            </div>
+        {!(shape === "dot") && <div className="filler-container">
+          <div className="filler"></div>
+        </div>}
       </button>
     </div>
   );
