@@ -3,18 +3,19 @@ import "./layouts.scss";
 import { animate, motion, useMotionValue } from "framer-motion";
 import Card from "../Card/Card";
 import ImageUrls from "../Common/image/ImageUrls";
+import {ImageUrl} from "../Common/image/ImageUrl";
 import useMeasure from "react-use-measure";
 
 const scrollContent = [
-  { image: ImageUrls.image14 },
-  { image: ImageUrls.image15 },
-  { image: ImageUrls.image16 },
-  { image: ImageUrls.image17 },
-  { image: ImageUrls.image18 },
-  { image: ImageUrls.image19 },
-  { image: ImageUrls.image20 },
-  { image: ImageUrls.image21 },
+  { image: ImageUrl.image14 },
+  { image: ImageUrl.image15 },
+  { image: ImageUrl.image16 },
+  { image: ImageUrl.image17 },
+  { image: ImageUrl.image18 },
+  { image: ImageUrl.image19 },
+  { image: ImageUrl.image20 },
 ];
+
 
 export default function InfiniteScrollFeed() {
   const normalDuration = 25;

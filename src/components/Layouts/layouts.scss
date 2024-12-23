@@ -84,6 +84,14 @@
   display: flex;
   gap: v.$gap-md;
 
+.image-container {
+  height: 20rem;
+}
+
+.image-container:has(img){
+  height: 100%;
+}
+
   @media screen and (max-width: 1023px) {
     flex-direction: column ;
   }

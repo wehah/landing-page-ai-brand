@@ -2,6 +2,7 @@ import Card from "../Card/Card";
 import "./slider.scss";
 import Slider from "react-slick";
 import ImageUrls from "../Common/image/ImageUrls";
+import { ImageUrl } from "../Common/image/ImageUrl";
 import Button from "../Common/Buttons/Buttons";
 
 export default function ImageSlider() {
@@ -25,16 +26,16 @@ export default function ImageSlider() {
     {
       title:
         "generate mesmerising illustrations & art  images from text.",
-      video: ImageUrls.video1,
+      video: ImageUrl.video1,
     },
     {
       title:
         "create High quality images of anything you can imagine in seconds.",
-      video: ImageUrls.video2,
+      video: ImageUrl.video2,
     },
     {
       title: "Fine-tuned Image Generating Model",
-      video: ImageUrls.video3,
+      video: ImageUrl.video3,
     },
   ];
 

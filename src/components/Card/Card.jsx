@@ -15,6 +15,8 @@ export default function Card({
   thumbnail,
   motionContent
 }) {
+
+
   const [showContent, setShowContent] = useState(false)
   return (
     <div
@@ -27,11 +29,11 @@ export default function Card({
     >
       {item && item.image && (
         <div className="card-image">
-          <Image src={item.image} alt="image" />
+          <Image src={item.image.src} blurhash={item.image.blurhash} alt="image" />
         </div>
       )}
       {item && item.video && (
-        <Video src={item.video} alt="video" />
+        <Video src={item.video.src} blurhash={item.video.blurhash} fallback={item.video.fallback} alt="video" />
       )}
       {content && (
         <div

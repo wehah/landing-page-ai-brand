@@ -34,6 +34,12 @@
         right: 0;
         padding: v.$p-lg;
     }
+    .image-container {
+        height: 30rem;
+      }
+      .image-container:has(img){
+        height: 100%;
+      }
 
     img {
         border-radius: v.$corner-md v.$corner-md 0 0;

@@ -2,16 +2,18 @@ import "./layouts.scss";
 import ImageUrls from "../Common/image/ImageUrls";
 import Card from "../Card/Card";
 import Typography from "../Common/Typography/Typography";
+import {ImageUrl} from "../Common/image/ImageUrl";
 
 export default function Grid() {
 
     const imgs = [
-        ImageUrls.image4,
-        ImageUrls.image5,
-        ImageUrls.image6,
-        ImageUrls.image7,
-        ImageUrls.image8,
+        ImageUrl.image4,
+        ImageUrl.image5,
+        ImageUrl.image6,
+        ImageUrl.image7,
+        ImageUrl.image8,
     ];
+
     const title = "A Glimpse into the AI-Generated World of our models. Create similar artistic images today.";
     return (
         <div className="grid-wrapper">

@@ -5,6 +5,7 @@ import Button from "../Common/Buttons/Buttons";
 import { useModalStore } from "../../store";
 import Image from "./../Common/image/Image";
 import ImageUrls from "../Common/image/ImageUrls";
+import { ImageUrl } from "../Common/image/ImageUrl";
 import Input from "../Common/Input/Input";
 import { backdropVariants, modalVariants } from "./ModalAnimations";
 import { useEffect } from "react";
@@ -54,7 +55,7 @@ const Modal = () => {
                     onClick={handleClick}
                   />
                 </div>
-                <Image src={ImageUrls.image3} />
+                <Image src={ImageUrl.image1.src} blurhash={ImageUrl.image3.blurhash} />
               </div>
               <div className="modal-body">
                 <Typography variant={"body1"} color={"primary-dim"}>

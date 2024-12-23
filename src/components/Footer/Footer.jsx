@@ -8,7 +8,7 @@ import youtube from "../../assets/icons/youtube.svg";
 import instagram from "../../assets/icons/instagram.svg";
 import facebook from "../../assets/icons/facebook.svg";
 
-
+let blurhash = "LKO2?U%2Tw=w]~RBVZRi};RPxuwH";
 
 export default function Footer() {
 
@@ -26,7 +26,7 @@ export default function Footer() {
                       </div>
                 <div className="footer-socials">
                 {socials.map((item) => (
-                    <Image key={item} src={item} alt={`${item}`} />
+                    <Image key={item} src={item} blurhash={blurhash} alt={`${item}`} />
                 ))}
               
                 </div>
