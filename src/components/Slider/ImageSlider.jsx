@@ -1,7 +1,6 @@
 import Card from "../Card/Card";
 import "./slider.scss";
 import Slider from "react-slick";
-import ImageUrls from "../Common/image/ImageUrls";
 import { ImageUrl } from "../Common/image/ImageUrl";
 import Button from "../Common/Buttons/Buttons";
 

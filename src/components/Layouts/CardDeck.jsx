@@ -1,5 +1,4 @@
 import "./layouts.scss";
-import ImageUrls from "../Common/image/ImageUrls";
 import { ImageUrl } from "../Common/image/ImageUrl";
 import Card from "../Card/Card";
 

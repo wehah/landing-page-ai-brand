@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./layouts.scss";
 import { animate, motion, useMotionValue } from "framer-motion";
 import Card from "../Card/Card";
-import ImageUrls from "../Common/image/ImageUrls";
 import {ImageUrl} from "../Common/image/ImageUrl";
 import useMeasure from "react-use-measure";
 
