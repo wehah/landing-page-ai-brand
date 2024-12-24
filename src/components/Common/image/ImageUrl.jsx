@@ -1,3 +1,4 @@
+import img21 from "../../../assets/images/shahadat-rahman-unsplash.webp"
 export const ImageUrl = {
   image1: {
     src: " https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -79,6 +80,9 @@ export const ImageUrl = {
     src: "https://images.unsplash.com/photo-1717501219621-7b860d789a2e?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     blurhash: "U8L20R00wn0dGZz;?ZNL1}VctLR.uNQ-$+I:",
   },
+    image21: {
+        src: img21,
+    },
   "image22": {
     "src": "https://images.unsplash.com/photo-1556691421-cf15fe27a0b6?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "blurhash": "UJCgvr}c5y1COuOZf3wH1XAB$,=zw2wKofS_"
@@ -90,8 +94,7 @@ export const ImageUrl = {
   video1: {
     src: "https://videos.pexels.com/video-files/25744130/11904084_2560_1440_24fps.mp4",
     blurhash: "U8L20R00wn0dGZz;?ZNL1}VctLR.uNQ-$+I:",
-    fallback:
-      "https://images.unsplash.com/photo-1556691421-cf15fe27a0b6?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    fallback: img21,
   },
 
   video2: {
