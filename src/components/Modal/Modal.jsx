@@ -55,7 +55,7 @@ const Modal = () => {
                     onClick={handleClick}
                   />
                 </div>
-                <Image src={ImageUrl.image1.src} blurhash={ImageUrl.image3.blurhash} />
+                <Image src={ImageUrl.image23.src} blurhash={ImageUrl.image23.blurhash} />
               </div>
               <div className="modal-body">
                 <Typography variant={"body1"} color={"primary-dim"}>
