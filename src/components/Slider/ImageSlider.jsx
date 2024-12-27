@@ -12,9 +12,9 @@ export default function ImageSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500000,
+    autoplaySpeed: 16000,
     arrows: false,
-    cssEase: "cubic-bezier(0.12, 0.57, 0.63, 0.21)",
+    cssEase: "linear",
     dotsClass: "slider-dots",
     customPaging: (i) => (
       <Button variant="secondary" label={"steppers"} shape={"dot"}></Button>
