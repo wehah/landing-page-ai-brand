@@ -13,5 +13,5 @@ export default defineConfig({
       ext: '.gz',
     }),
   ],
-  base: "https://wehah.github.io/landing-page-ai-brand",
+  base: "https://wehah.github.io/landing-page-ai-brand"
 })
