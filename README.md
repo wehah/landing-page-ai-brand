@@ -34,10 +34,14 @@ To run this project, you'll need the following installed on your system:
 
 ## Running the Project
 1. Clone or download the project repository:
-   ```bash
+	```bash
    git clone https://github.com/wehah/landing-page-ai-brand.git
 2. Open the project in code editor.
-3. Open terminal and install dependencies `npm install`.
-4. Start the project `npm run dev`.
+3. Open terminal and install dependencies:
+	```bash
+	npm install
+4. Start the project:
+ 	```bash 
+	npm run dev
 
 Mohamed.
