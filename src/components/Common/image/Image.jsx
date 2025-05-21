@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ImageLoader from "./ImageLoader";
 import { animateBlurhash, animateImage } from "./ImageAnimations";
 
-export default function Image({src, blurhash}) {
+export default function Image({src, alt, blurhash}) {
 
   const ref = useRef(null);
   const loading = ImageLoader({ src, ref,  });
@@ -25,7 +25,7 @@ export default function Image({src, blurhash}) {
             animate="visible"
             variants={animateImage}
           >
-            <img src={src} />
+            <img src={src} alt={alt} />
           </motion.div>
         )}
       </AnimatePresence>

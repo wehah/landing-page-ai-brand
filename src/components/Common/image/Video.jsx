@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import VideoLoader from "./VideoLoader";
 import Image from "./Image";
 
-export default function Video({ src, blurhash, fallback, ...props }) {
+export default function Video({ src, alt, blurhash, fallback, ...props }) {
   const ref = useRef(null);
   const loading = VideoLoader({ src, ref });
 

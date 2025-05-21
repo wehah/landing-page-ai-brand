@@ -13,6 +13,8 @@ export default function Grid() {
         ImageUrl.image8,
     ];
 
+      console.log("Card component rendered", imgs.map((img) => img));
+
     const title = "A Glimpse into the AI-Generated World of our models. Create similar artistic images today.";
     return (
         <div className="grid-wrapper">

@@ -17,6 +17,8 @@ export default function Card({
 }) {
 
 
+
+
   const [showContent, setShowContent] = useState(false)
   return (
     <div
@@ -29,11 +31,11 @@ export default function Card({
     >
       {item && item.image && (
         <div className="card-image">
-          <Image src={item.image.src} blurhash={item.image.blurhash} alt="image" />
+          <Image src={item.image.src} blurhash={item.image.blurhash} alt={item.image.alt? item.image.alt:"image"} />
         </div>
       )}
       {item && item.video && (
-        <Video src={item.video.src} blurhash={item.video.blurhash} fallback={item.video.fallback} alt="video" />
+        <Video src={item.video.src} blurhash={item.video.blurhash} fallback={item.video.fallback} alt={item.video.alt? item.video.alt:"video"} />
       )}
       {content && (
         <div

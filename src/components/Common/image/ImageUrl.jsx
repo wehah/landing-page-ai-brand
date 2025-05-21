@@ -23,10 +23,12 @@ export const ImageUrl = {
   image6: {
     src: "https://images.unsplash.com/photo-1655634627107-da33d1c1cf02?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     blurhash: "U3H_f95600%200sE?aXR009Y~XV?W,NZV@i^",
+    alt: "A visualisation of pattern recognition. "
   },
   image7: {
-    src: "https://images.unsplash.com/photo-1713472728570-5a6ef3947de1?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://images.unsplash.com/photo-1717501218424-b4724c7882bd?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     blurhash: "U4B.f$|E151Rx{9sRj^l00=|9YM_0cpwRh+G",
+    alt: "A hand reaching for a pile of seeds.",
   },
   image8: {
     src: "https://images.unsplash.com/photo-1573588028698-f4759befb09a?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -35,6 +37,7 @@ export const ImageUrl = {
   image9: {
     src: "https://images.unsplash.com/photo-1654859869130-fd0a2aa5539b?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     blurhash: "U89%Chof00M|~Bj[4;WB?Fj[D+WCENoK-TW:",
+    alt: "AI generated image of an astronaut on mars.",
   },
   image10: {
     src: "https://images.unsplash.com/photo-1715416751848-fc2f81e200df?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
