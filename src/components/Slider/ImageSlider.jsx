@@ -25,16 +25,16 @@ export default function ImageSlider() {
     {
       title:
         "generate mesmerising illustrations & art  images from text.",
-      video: ImageUrl.video1,
+      video: ImageUrl.video4,
     },
     {
       title:
         "create High quality images of anything you can imagine in seconds.",
-      video: ImageUrl.video2,
+      video: ImageUrl.video5,
     },
     {
       title: "Fine-tuned Image Generating Model",
-      video: ImageUrl.video3,
+      video: ImageUrl.video6,
     },
   ];
 

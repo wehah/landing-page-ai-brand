@@ -3,13 +3,14 @@
   text-align: center;
   text-wrap: pretty;
   z-index: 0;
+  position: relative;
 
   * {
     box-sizing: border-box;
     margin: 0;
   }
 
-  > *:not(.navbar, .footer) {
+  > *:not(.navbar, .footer, .slider-wrapper) {
     padding: 0 v.$p-lg;
     margin: v.$m-xlg 0;
 

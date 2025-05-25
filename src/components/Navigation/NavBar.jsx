@@ -22,7 +22,7 @@ export default function NavBar() {
 
   return (
     <nav className="navbar">
-      <Typography variant="h3" color="primary-dim">
+      <Typography variant="h3" color="secondary">
         wehah.ai
       </Typography>
 
@@ -33,7 +33,7 @@ export default function NavBar() {
               <ListItem
                 key={item.id}
                 label={item.item}
-                color="primary"
+                color="primary-light"
                 content={item.content}
               />
             </div>

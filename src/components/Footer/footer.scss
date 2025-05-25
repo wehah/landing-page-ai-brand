@@ -15,106 +15,74 @@
     margin-top: 0.85rem;
   }
 
-  .footer-content {
+  .footer-items {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    gap: v.$gap-md;
-
-    .footer-list-items {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-grow: 2;
-      gap: v.$gap-md;
-
-      .list-item {
-        background-color: v.$color-primary-pale;
-      }
-    }
-
-    .footer-socials {
-      flex-grow: 1;
-      > * {
-        width: 3.5rem;
-        border-radius: v.$corner-md;
-        transition: 0.3s ease-in-out;
-
-
-
-        &:hover {
-            background-color: v.$color-secondary-light;
-            transition: 0.35s ease-in-out;
-        }
-      }
-      .image-container >* {
-        height: auto;
-        aspect-ratio: 1/1;
-      }
-    }
+    text-align: left;
 
     @media screen and (max-width: 1023px) {
       flex-direction: column;
+      gap: v.$gap-xlg;
+    }
+
+    .footer-item {
+      display: flex;
+      flex-direction: column;
       gap: v.$gap-md;
 
-      .footer-socials {
-        align-self: center;
-      }
-
-      .footer-list-items {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    @media screen and (max-width: 767px) {
-    }
-
-    .footer-socials {
-      display: flex;
-      justify-content: flex-end;
-      gap: 01rem;
-
-      img {
-        padding: v.$p-md;
-      }
-
-      > * {
+      p:not(:first-child) {
         cursor: pointer;
       }
     }
   }
+
   .footer-text {
     border-top: v.$border-sm;
     border-bottom: v.$border-sm;
     padding: v.$p-lg 0;
   }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: v.$gap-md;
+
+    > * {
+      width: 3rem;
+      border-radius: v.$corner-md;
+      padding: v.$p-md;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: v.$color-secondary-light;
+        transition: 0.35s ease-in-out;
+      }
+    }
+    .image-container > * {
+      height: auto;
+      aspect-ratio: 1/1;
+    }
+  }
 }
 
 .dark-theme {
   .footer {
+    .footer-items {
+      .footer-item p:not(:first-child) {
+        color: v.$color-primary-light;
+      }
+      p:first-child {
+        color: v.$color-primary-pale;
+      }
+    }
+
     .footer-text {
       border-top: v.$border-sm-dark;
       border-bottom: v.$border-sm-dark;
 
       > * {
         color: v.$color-primary-pale;
-      }
-    }
-
-    .list-item {
-      > * {
-        background-color: v.$color-primary-pale;
-        >* {
-          color: v.$color-primary-main;
-        }
-
-        &:hover {
-          background-color: v.$color-secondary-light;
-        }
-        &:active {
-          background-color: v.$color-primary-light;
-        }
       }
     }
   }

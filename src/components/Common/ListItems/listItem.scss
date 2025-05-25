@@ -17,7 +17,7 @@
     transition: 0.35s ease-in-out;
 
     &:hover {
-      background-color: v.$color-secondary-light;
+      background-color: v.$color-secondary-dim;
       transition: 0.35s ease-in-out;
     }
     &:active {
@@ -86,7 +86,7 @@
       }
 
       &:hover > * {
-        color: v.$color-primary-main;
+        color: v.$color-primary-light;
       }
     }
   }

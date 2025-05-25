@@ -5,7 +5,8 @@ import classNames from "classnames";
 import Typography from "../Common/Typography/Typography";
 import Button from "../Common/Buttons/Buttons";
 import { useState } from "react";
-import {AnimatePresence, motion} from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 export default function Card({
   cardLabel,
@@ -13,13 +14,12 @@ export default function Card({
   item,
   content,
   thumbnail,
-  motionContent
+  motionContent,
 }) {
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isTablet = useMediaQuery({ query: "(max-width: 1023px)" });
 
-
-
-
-  const [showContent, setShowContent] = useState(false)
+  const [showContent, setShowContent] = useState(false);
   return (
     <div
       className={classNames({
@@ -31,11 +31,24 @@ export default function Card({
     >
       {item && item.image && (
         <div className="card-image">
-          <Image src={item.image.src} blurhash={item.image.blurhash} alt={item.image.alt? item.image.alt:"image"} />
+          <Image
+            src={item.image.src}
+            blurhash={item.image.blurhash}
+            alt={item.image.alt ? item.image.alt : "image"}
+          />
         </div>
       )}
       {item && item.video && (
-        <Video src={item.video.src} blurhash={item.video.blurhash} fallback={item.video.fallback} alt={item.video.alt? item.video.alt:"video"} />
+        <Video
+          src={
+            (isMobile || isTablet) && item.video.src2
+              ? item.video.src2
+              : item.video.src
+          }
+          blurhash={item.video.blurhash}
+          fallback={item.video.fallback}
+          alt={item.video.alt ? item.video.alt : "video"}
+        />
       )}
       {content && (
         <div
@@ -50,41 +63,41 @@ export default function Card({
           {content.body && (
             <Typography {...content.body}> {item.description}</Typography>
           )}
-          <span className="card-button"> 
-          {thumbnail && (
-            <span className="card-thumbnail">
-              <Typography  {...thumbnail.content}>{thumbnail.text}</Typography>
+          <span className="card-button">
+            {thumbnail && (
+              <span className="card-thumbnail">
+                <Typography {...thumbnail.content}>{thumbnail.text}</Typography>
               </span>
-          )}
-          {content.buttonContents && (
-            <span>
-              {" "}
-              <Button {...content.buttonContents} />{" "}
-            </span>
-          )}
+            )}
+            {content.buttonContents && (
+              <span>
+                {" "}
+                <Button {...content.buttonContents} />{" "}
+              </span>
+            )}
           </span>
         </div>
       )}
       <AnimatePresence>
-       {motionContent && showContent && (
-                <motion.div
-                 className="item-content"
-                 initial={{opacity:0}}
-                 animate={{opacity:1}}
-                 exit = {{opacity:0}}
-                 >
-                  <div className="overley" />
-                  <motion.div 
-                  className="content-body"
-                  initial = {{y:15}}
-                  animate = {{y:0}}
-                  exit={{y:15}}
-                  >
-                    <Button label={motionContent} variant={"secondary"} />
-                  </motion.div>
-                </motion.div>
-              )} 
-              </AnimatePresence>
+        {motionContent && showContent && (
+          <motion.div
+            className="item-content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <div className="overley" />
+            <motion.div
+              className="content-body"
+              initial={{ y: 15 }}
+              animate={{ y: 0 }}
+              exit={{ y: 15 }}
+            >
+              <Button label={motionContent} variant={"secondary"} />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 @use "../../styles/variables.scss" as v;
 
-
 .navbar {
   width: 100%;
   display: flex;
@@ -8,13 +7,20 @@
   align-items: center;
   box-shadow: v.$shadow-paper;
   padding: v.$p-md v.$p-lg;
-  position: relative;
+  position: absolute;
+  z-index: 10;
+  backdrop-filter: hue-rotate(90deg);
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1023px) {
     padding: v.$p-md;
+    backdrop-filter: none;
+    background: rgba(0, 128, 0, 0.2);
   }
 
-  .nav-action-buttons {display: flex; justify-content: space-between;; }
+  .nav-action-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
   .overlay {
     height: 100dvh;
     width: 100dvw;
@@ -44,7 +50,6 @@
     }
   }
 
-
   .list {
     display: flex;
     align-items: center;
@@ -54,14 +59,14 @@
 
 .drawer-user-action {
   text-align: left;
-  >* {
+  > * {
     padding: 0 v.$p-md;
   }
 
   span {
     margin-top: v.$m-md !important;
     display: flex;
-    gap:v.$gap-md;
+    gap: v.$gap-md;
   }
 }
 
@@ -70,7 +75,8 @@
   color: v.$color-primary-light;
 
   .list-item {
-    p, span {
+    p,
+    span {
       color: v.$color-primary-light;
     }
   }
@@ -102,18 +108,16 @@
 
 .search {
   flex-grow: 2;
-   padding: v.$m-lg;
+  padding: v.$m-lg;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: v.$gap-md;
 
-  >* {
+  > * {
     width: 100%;
   }
-
- 
 
   .popular-searches {
     display: flex;
@@ -136,12 +140,11 @@
 .dark-theme {
   .nav-tray {
     background-color: v.$color-primary-dimmer;
-
   }
 }
 
 .text-decoration {
-  >* {
+  > * {
     cursor: pointer;
     text-align: left;
     text-decoration-color: v.$color-primary-pale !important;
@@ -153,4 +156,4 @@
       transition: 0.35s;
     }
   }
-  }
+}
